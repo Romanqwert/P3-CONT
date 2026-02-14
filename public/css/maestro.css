@@ -1,0 +1,192 @@
+/* Contenedor Principal */
+.maestro-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Filas y Columnas */
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input[type="text"], 
+input[type="number"], 
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+input[readonly] {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+/* Botón de Búsqueda junto a Cuenta */
+#cuenta { flex: 2; font-weight: bold; color: #2980b9; }
+#nivel { flex: 0.5; text-align: center; }
+
+/* Grid de Checkboxes */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #f1f4f7;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.checkbox-grid label {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Grid de Balances (Solo lectura) */
+.balances-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.balances-grid input {
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Botonera */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button[onclick^="guardar"] { background: #27ae60; color: white; }
+button[onclick^="guardar"]:hover { background: #219150; }
+
+button[onclick^="borrar"] { background: #e74c3c; color: white; }
+button[onclick^="borrar"]:hover { background: #c0392b; }
+
+button[onclick="location.reload()"] { background: #95a5a6; color: white; }
+
+/* Modal de Búsqueda */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#tablaCuentas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#tablaCuentas tr { cursor: pointer; border-bottom: 1px solid #eee; }
+#tablaCuentas tr:hover { background: #f1faff; }
+#tablaCuentas td { padding: 8px; font-size: 14px; }
+
+.maestro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.maestro-header h2 {
+    margin: 0;
+    border: none;
+    text-align: left;
+}
+
+
+.header-botones {
+    display: flex;
+    gap: 10px;
+}
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+
+/* Formulario tipo etiqueta / campo */
+.form-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 12px 15px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.form-grid label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Checkboxes alineados */
+.form-grid input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Sección balances */
+.form-grid.balances input {
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #27ae60;
+}
