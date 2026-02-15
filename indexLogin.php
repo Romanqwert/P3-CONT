@@ -6,7 +6,10 @@
     <!-- hace que la pagina se vea bien en cualquier tipo de dipositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido - Login</title> 
-    <link rel="stylesheet" href="../public/css/login.css">
+    <!--<link rel="stylesheet" href="../public/css/login.css">-->
+
+    <link rel="stylesheet" href="public/css/login.css">
+    
 </head>
 <body>
     <div class="login-container">

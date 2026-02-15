@@ -1,5 +1,5 @@
 /* Contenedor Principal */
-.maestro-container {
+/*.maestro-container {
     max-width: 800px;
     margin: 20px auto;
     background: #fff;
@@ -15,10 +15,10 @@ h2 {
     padding-bottom: 10px;
     margin-bottom: 25px;
     text-align: center;
-}
+}*/
 
 /* Filas y Columnas */
-.row {
+/*.row {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
@@ -38,14 +38,14 @@ input[readonly] {
     background-color: #f8f9fa;
     color: #7f8c8d;
     cursor: not-allowed;
-}
+}*/
 
 /* Botón de Búsqueda junto a Cuenta */
-#cuenta { flex: 2; font-weight: bold; color: #2980b9; }
-#nivel { flex: 0.5; text-align: center; }
+/*#cuenta { flex: 2; font-weight: bold; color: #2980b9; }
+#nivel { flex: 0.5; text-align: center; }*/
 
 /* Grid de Checkboxes */
-.checkbox-grid {
+/*.checkbox-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     background: #f1f4f7;
@@ -60,10 +60,10 @@ input[readonly] {
     align-items: center;
     gap: 8px;
     cursor: pointer;
-}
+}*/
 
 /* Grid de Balances (Solo lectura) */
-.balances-grid {
+/*.balances-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -75,10 +75,10 @@ input[readonly] {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: #27ae60;
-}
+}*/
 
 /* Botonera */
-.botones {
+/*.botones {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -94,18 +94,19 @@ button {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s;
-}
+}*/
 
+/*
 button[onclick^="guardar"] { background: #27ae60; color: white; }
 button[onclick^="guardar"]:hover { background: #219150; }
 
 button[onclick^="borrar"] { background: #e74c3c; color: white; }
 button[onclick^="borrar"]:hover { background: #c0392b; }
 
-button[onclick="location.reload()"] { background: #95a5a6; color: white; }
+button[onclick="location.reload()"] { background: #95a5a6; color: white; }*/
 
 /* Modal de Búsqueda */
-.modal {
+/*.modal {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.5);
@@ -129,8 +130,8 @@ button[onclick="location.reload()"] { background: #95a5a6; color: white; }
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-}
-
+}*/
+/*
 #tablaCuentas tr { cursor: pointer; border-bottom: 1px solid #eee; }
 #tablaCuentas tr:hover { background: #f1faff; }
 #tablaCuentas td { padding: 8px; font-size: 14px; }
@@ -146,47 +147,176 @@ button[onclick="location.reload()"] { background: #95a5a6; color: white; }
     margin: 0;
     border: none;
     text-align: left;
-}
+}*/
 
 
-.header-botones {
+/*.header-botones {
     display: flex;
     gap: 10px;
-}
+}*/
 
 
-.col {
+/*.col {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-bottom: 15px;
 }
-
+*/
 
 /* Formulario tipo etiqueta / campo */
-.form-grid {
+/*.form-grid {
     display: grid;
     grid-template-columns: 220px 1fr;
     gap: 12px 15px;
     margin-bottom: 25px;
     align-items: center;
-}
+}*/
 
-.form-grid label {
+/*.form-grid label {
     font-weight: 600;
     color: #2c3e50;
-}
+}*/
 
 /* Checkboxes alineados */
-.form-grid input[type="checkbox"] {
+/*.form-grid input[type="checkbox"] {
     width: 18px;
     height: 18px;
-}
+}*/
 
 /* Sección balances */
-.form-grid.balances input {
+/*.form-grid.balances input {
     text-align: right;
     font-family: 'Courier New', monospace;
     font-weight: bold;
     color: #27ae60;
 }
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(211, 211, 236);
+    font-family: sans-serif;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #50505024;
+    margin-bottom: 1.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.maestro-container{
+    background-color: white;
+    box-shadow:  0 0 12px rgb(153, 153, 178);
+    max-width: 800px;
+    margin:1rem auto;
+    padding: 1rem 0;
+    border-radius: 4px;
+}
+
+.maestro-header{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-grid{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.balances{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"]{
+    padding: 0.820rem;
+    width: 80%;
+    margin: 10px 0;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(179, 179, 179, 0.412);
+}
+
+.div-cuenta{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.div-select{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+select{
+    width: 80%;
+    padding: 0.800rem;
+    margin: 0.620rem 0;
+    border: 1px solid rgb(185, 185, 185);
+    box-shadow: 0 2px 10px rgba(179, 179, 179, 0.412);
+    border-radius: 4px;
+}
+
+.label-cuenta{
+    text-align: center;
+}
+
+.label-auxiliar{
+    text-align: center;
+}
+
+.div-check{
+    display: flex;
+    margin: 1.4rem 0;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.div-form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.header-botones{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button{
+    width: 20%;
+    padding: 0.720rem 0;
+    border-radius: 4px;
+    border: 1px solid gray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[onclick^="guardar"] { background: #27ae60; color: white; }
+button[onclick^="guardar"]:hover { background: #219150; }
+
+button[onclick^="borrar"] { background: #e74c3c; color: white; }
+button[onclick^="borrar"]:hover { background: #c0392b; }
+
+button[onclick="location.reload()"] { background: #95a5a6; color: white; }
+
